@@ -1,7 +1,7 @@
 streamlit==1.38.0
 faiss-cpu
 sentence-transformers==2.6.0
-torch==2.6.0+cpu  # Updated to a valid CPU version
+torch==2.6.0 # Updated to a valid CPU version
 pymupdf==1.24.5
 nltk==3.8.1
 google-generativeai==0.7.0
