@@ -318,7 +318,7 @@ def retrieve_chunks(query: str, index, model, chunks: list, k: int = 15) -> list
 # 4. Generate answer with detailed synthesis
 def generate_answer(query: str, retrieved_chunks: list, api_key: str) -> dict:
     genai.configure(api_key=api_key)
-    model = genai.GenerativeModel('gemini-2.0-flash')
+    model = genai.GenerativeModel('gemini-2.5-flash')
 
     doc_pages = {}
     for chunk in retrieved_chunks:
@@ -433,7 +433,7 @@ def evaluate_with_ragas(dataset: Dataset) -> dict:
     try:
         # Configure Gemini LLM for RAGAS
         gemini_llm = ChatGoogleGenerativeAI(
-            model="gemini-2.0-flash",
+            model="gemini-2.5-flash",
             google_api_key=os.getenv("GEMINI_API_KEY"),
             temperature=0
         )
