@@ -353,7 +353,7 @@ Instructions:
 2. For queries about a group of people (e.g., "faculty of electrical"), list all individuals mentioned in the relevant section, including their names, titles, qualifications, and areas of interest if available.
 3. For queries about a specific person (e.g., "who is Engr. Dr. Muhammad Shahzad"), provide all available details about them, including their role, faculty/department affiliation, qualifications, and areas of interest.
 4. After the conclusion, provide additional details or context if necessary to support the answer.
-5. At the end, list the sources used in a section called 'Sources', citing the document name and page number (e.g., "Sources: [admission.pdf, Page 5]", "Sources: [web_example.com, Page 1]").
+5. At the end, list the sources used in a section called 'Sources', citing the document name and page number (e.g., "Sources: [prospectus.pdf, Page 5]", "Sources: [web_example.com, Page 1]").
 6. Do NOT include inline citations in the main answer (e.g., avoid "[doc, Page 5]" within the text).
 7. If the documents don't contain the answer, say: "I don't have enough information to answer this question."
 8. Ensure all relevant individuals or items are included, even if spread across multiple pages or sections.
@@ -836,7 +836,7 @@ def main():
         st.subheader("Document Sources")
         st.write("This chatbot can answer questions based on PDF documents and scraped web content.")
 
-        pdf_paths = ["admission.pdf", "rules.pdf", "prospectus.pdf"]
+        pdf_paths = ["rules.pdf", "prospectus.pdf"]
         missing_pdf_files = [f for f in pdf_paths if not os.path.exists(f)]
         if missing_pdf_files:
             st.warning(f"Missing PDF files: {', '.join(missing_pdf_files)}. Please place these PDF files in the root directory.")
