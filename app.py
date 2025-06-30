@@ -836,7 +836,7 @@ def main():
         st.subheader("Document Sources")
         st.write("This chatbot can answer questions based on PDF documents and scraped web content.")
 
-        pdf_paths = ["admission.pdf", "rules.pdf"]
+        pdf_paths = ["admission.pdf", "rules.pdf", "prospectus.pdf"]
         missing_pdf_files = [f for f in pdf_paths if not os.path.exists(f)]
         if missing_pdf_files:
             st.warning(f"Missing PDF files: {', '.join(missing_pdf_files)}. Please place these PDF files in the root directory.")
