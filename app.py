@@ -51,9 +51,9 @@ load_dotenv()
 
 # Set page configuration
 st.set_page_config(
-    page_title="MNS-UET Chatbot",
-    layout="wide",
+    page_title="MNS-UET Chatbot"s
     page_icon="📄"
+    initial_sidebar_state="collapsed"
 )
 
 # Set GEMINI API key
